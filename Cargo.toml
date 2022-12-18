@@ -1,0 +1,18 @@
+[package]
+name = "microserver"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tower = { version = "0.4", features = ["util"] }
+tower-http = { version = "0.3.0", features = ["fs", "trace"] }
+
+[dependencies.axum]
+version = "0.6.0"
+features = ["query", "headers"]
+
+[dependencies.tokio]
+version = "1.17.0"
+features = ["macros", "fs", "rt-multi-thread"]
